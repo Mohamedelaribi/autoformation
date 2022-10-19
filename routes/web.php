@@ -21,9 +21,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/index',function(){
-    return view('index');
-});
+Route::get('/index','App\Http\Controllers\CrudController@stor')->middleware('auth');
 
 
 use Illuminate\Http\Request;
@@ -32,3 +30,5 @@ Route::any('/form', function(Request $resquest){
     return $name;
 
 });
+
+
