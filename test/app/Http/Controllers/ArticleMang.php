@@ -11,7 +11,7 @@ class ArticleMang extends Controller
     }
     public function getProduct(){
         $products = Article::find(1);
-        return $model = $products->model;
+        return $products->model;
     }
 }
 
